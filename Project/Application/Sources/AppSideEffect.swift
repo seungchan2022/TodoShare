@@ -8,14 +8,14 @@ import Platform
 // MARK: - AppSideEffect
 
 struct AppSideEffect: DependencyType, DashboardSideEffect {
-  let tostViewModel: ToastViewActionType
+  let toastViewModel: ToastViewActionType
   let sampleUseCase: SampleUseCase
 }
 
 extension AppSideEffect {
   static func generate() -> AppSideEffect {
     .init(
-      tostViewModel: ToastViewModel(),
+      toastViewModel: ToastViewModel(),
       sampleUseCase: SampleUseCasePlatform())
   }
 }

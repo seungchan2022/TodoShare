@@ -6,7 +6,7 @@ let targetList: [Target] = [
     name: "TodoShare",
     destinations: .iOS,
     product: .app,
-    productName: "Grab",
+    productName: "TodoShare",
     bundleId: "io.seungchan.todoShare",
     deploymentTargets: .iOS("18.0"),
     infoPlist: .extendingDefault(with: .compositeValue),

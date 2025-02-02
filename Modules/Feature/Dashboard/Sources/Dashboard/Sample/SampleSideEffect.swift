@@ -12,6 +12,20 @@ struct SampleSideEffect {
 }
 
 extension SampleSideEffect {
+
+  var sample: (String) -> Effect<SampleReducer.Action> {
+    { text in
+      .run { send in
+        await send(SampleReducer.Action.fetchSample(.success(text)))
+//        do {
+//          await send(SampleReducer.Action.fetchSample(.success(text)))
+//        } catch {
+//          await send(SampleReducer.Action.fetchSample(.failure(.other(error))))
+//        }
+      }
+    }
+  }
+
   var routeToHome: () -> Void {
     {
       navigator.next(

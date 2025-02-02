@@ -18,7 +18,12 @@ extension SamplePage: View {
         Text("홈으로 이동")
       }
 
+      Text(store.text)
+
       Spacer()
+    }
+    .onAppear {
+      store.send(.sample)
     }
   }
 }

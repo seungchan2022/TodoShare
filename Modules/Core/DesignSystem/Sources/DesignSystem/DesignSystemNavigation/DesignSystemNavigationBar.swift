@@ -60,7 +60,7 @@ extension DesignSystemNavigationBar: View {
             }
 
             if let imageURL = backAction.imageURL {
-              AsyncImage(url: URL(string: imageURL)) { _ in
+              RemoteImage(url: imageURL) {
                 Image(systemName: "person.circle.fill")
                   .imageScale(.large)
                   .foregroundStyle(.black)
